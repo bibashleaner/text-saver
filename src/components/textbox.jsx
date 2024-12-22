@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from 'react';
+import '../assets/css/components/textbox.css';
 
 function Textbox()
 {
@@ -18,18 +19,18 @@ function Textbox()
     }
 
     return (
-     <div style={{padding:'20px', fontFamily:'arial'}}>
+     <div style={{padding:'20px', fontFamily:'arial'}} className="text-wrapper">
         <h1>Text Saver</h1>
         <textarea
             rows='10'
-            cols='50'
+            cols='80'
             placeholder='Write something here'
             value={text}
             onChange={(e) => setText(e.target.value)}
             
             ></textarea>
         <br/><br/>
-        <button onClick={handleDownloadButton}>Download</button>
+        <button onClick={handleDownloadButton}>Save text</button>
     </div>
     );
 }
