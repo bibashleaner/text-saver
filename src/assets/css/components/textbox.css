@@ -1,22 +1,44 @@
+
 .text-wrapper > textarea{
-    margin-left: 21rem;
+    margin-left: 22rem;
     border-radius: 8px;
     border-width: 10px;
+    resize: none;
 }
 
 .text-wrapper > h1{
-    
     margin-left: 36rem;
     font-weight: bold;
     color: #758bfd;
 }
 
-.text-wrapper > button{
+.buttons{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 22rem;
+}
+
+.buttons > button{
     font-weight: bold;
     color: white;
     background-color: #758bfd;
     border-color: #758bfd;
     border-radius: 5px;
-    margin-left: 58rem;
-    padding: 10px 10px 10px 10px;
+    margin-left: 7rem;
+    padding: 0px 50px 0px 50px;
+}
+
+.buttons > select{
+    background-color: #758bfd;
+    color: white;
+    font-weight: bold;
+    border-color: #758bfd;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.buttons > label{
+    font-weight: bold;
+    font-size: 25px;
 }

@@ -5,6 +5,16 @@ import '../assets/css/components/textbox.css';
 function Textbox()
 {
     const [text, setText] = useState(' ');
+    const [font, setFont] = useState('Arial, sans-serif');
+
+    const fonts = [
+        "Arial, sans-serif",
+        "Courier New, monospace",
+        "Georgia, serif",
+        "Tahoma, sans-serif",
+        "Times New Roman, serif",
+        "Verdana, sans-serif",
+      ];
     
     const handleDownloadButton = () =>{
         const blob =new Blob([text], {type:'text/plain'}); //blob holds the plain text file
@@ -19,18 +29,38 @@ function Textbox()
     }
 
     return (
-     <div style={{padding:'20px', fontFamily:'arial'}} className="text-wrapper">
+     <div className="text-wrapper">
         <h1>Text Saver</h1>
         <textarea
             rows='10'
             cols='80'
-            placeholder='Write something here'
+            placeholder="Write something here"
             value={text}
             onChange={(e) => setText(e.target.value)}
-            
+            style={{
+                fontFamily: font, 
+            }}
             ></textarea>
+            <div className="buttons">
+                <label htmlFor="font-selector" style={{ display: "block", marginBottom: "10px" }}>
+                    Select Font:
+                </label>  
+
+            <select
+                value={font}
+                onChange={(e) => setFont(e.target.value)}
+                style={{
+                    marginBottom: "20px",
+                    fontSize: "16px",
+                }}
+                >
+            {fonts.map((fontName, index) => 
+                <option key={index} value={fontName}>{fontName}</option>
+            )}
+            </select>
         <br/><br/>
-        <button onClick={handleDownloadButton}>Save text</button>
+        <button onClick={handleDownloadButton}>Download</button>
+        </div>
     </div>
     );
 }

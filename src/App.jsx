@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import Menu, {FirstMenu, OtherMenu, Contact} from './components/Menu';
 import {Home} from './components/Home';
 import About from './components/About';
+import SignaturePad from './components/SignatureBox';
+import Textbox from './components/textbox';
 
 function App() {
   return (
@@ -19,9 +21,12 @@ function App() {
                     <Route path="/firstMenu" element={<FirstMenu />} />
                     <Route path="/otherMenu" element={<OtherMenu />} />
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/textpath" element={<Textbox />} />
+                    <Route path="/sigpath" element={<SignaturePad />} />
+
                 </Routes>
             </div>
-        <Footer/>
+        <Footer />
       </Router>
     </>
   );
