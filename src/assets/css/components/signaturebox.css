@@ -1,0 +1,13 @@
+.sign{
+    justify-items: center;
+}
+
+.sign > h1{
+    margin-bottom: 30px;
+    color: #758bfd;
+    font-weight: bold;
+}
+
+.buttons{
+    justify-items: center;
+}
